@@ -21,3 +21,8 @@ services:
       - /app/node_modules  # This anonymous volume preserves container's node_modules
     depends_on:
       - go-backend
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
