@@ -1,4 +1,4 @@
-module github.com/q-summitLabs/cefi-backend.git
+module github.com/q-summitLabs/cefi/tree/main/backend
 
 go 1.24.1
 

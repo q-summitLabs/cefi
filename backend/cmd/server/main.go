@@ -5,8 +5,8 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/q-summitLabs/cefi-backend.git/internal/handlers"
-	"github.com/q-summitLabs/cefi-backend.git/internal/middleware"
+	"github.com/q-summitLabs/cefi/tree/main/backend/internal/handlers"
+	"github.com/q-summitLabs/cefi/tree/main/backend/internal/middleware"
 )
 
 func main() {
