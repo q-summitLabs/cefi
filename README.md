@@ -35,3 +35,13 @@ Our project uses a monorepo structure with a frontend (Next.js) and a backend (G
     ```bash
     docker-compose up --build
     ```
+Docker Compose will build both the frontend and backend images and start the containers.
+
+### Access the Application
+
+- Frontend (Next.js):
+Open your browser and go to http://localhost:3000.
+
+- Backend (Go):
+Open your browser or API client and navigate to http://localhost:8080
+or access a specific endpoint like http://localhost:8080/api/data (if applicable).
