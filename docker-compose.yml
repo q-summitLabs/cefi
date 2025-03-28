@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  go-backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      # Optionally set environment variables here if needed
+
+  nextjs:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      # Tell Next.js where to find the Go backend using Docker networking.
+      - NEXT_PUBLIC_GO_API_URL=http://go-backend:8080
+    depends_on:
+      - go-backend
