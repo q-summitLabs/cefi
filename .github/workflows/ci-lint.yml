@@ -1,4 +1,4 @@
-name: CI Pipeline
+name: CI Lint
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: ['**']
 
 jobs:
-  build-and-test:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,11 +23,8 @@ jobs:
       - name: Start containers
         run: docker compose up -d
 
-      - name: Run Go tests (placeholder)
-        run: echo "Running Golang tests"
-
-      - name: Run frontend tests
-        run: echo "Running nextJS tests"
+      - name: Lint frontend code
+        run: docker compose exec nextjs npm run lint
 
       - name: Shut down containers
         run: docker compose down
